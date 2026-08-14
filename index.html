@@ -16,7 +16,8 @@
     linkedin:  "https://www.linkedin.com/in/rony-chaar/",
     youtubeId: "",                     // 11 chars after ?v= — leave "" to hide the video
     vertical:  true,                   // false if filmed horizontally
-    cvFile:    "cv.pdf",               // upload next to this file
+    cvFile:    "Rony-Chaar-CV-Pride-2026.pdf",          // the file in the repo
+    cvName:    "Rony Chaar - CV - Pride 2026.pdf",      // the name it saves as
     email:     "rony.chaar@proton.me",
     phone:     "+45 55 26 54 66",      // "" to hide
     signPhoto: "sign.jpg",             // "" to hide
@@ -272,7 +273,9 @@
 
 <script>
   document.getElementById('li').href = ME.linkedin;
-  document.getElementById('cv').href = ME.cvFile;
+  var cvLink = document.getElementById('cv');
+  cvLink.href = ME.cvFile;
+  cvLink.setAttribute('download', ME.cvName);
 
   var m = document.getElementById('mail');
   m.href = 'mailto:' + ME.email; m.textContent = ME.email;
